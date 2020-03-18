@@ -5,9 +5,9 @@ AnalogIn Ain(A0);
 float ADCdata;
 
 int main() {
-    while(true) {
-        ADCdata = Ain;
-        Aout = ADCdata;
-        wait(2);
-    }
+	while(true) {
+		ADCdata = Ain;
+		Aout = ADCdata;
+		wait(0.002);
+	}
 }

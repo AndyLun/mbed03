@@ -10,14 +10,14 @@ int i;
 float ADCdata[128];
 
 int main() {
-    for(i = 0; i < smpl; i++) {
-        Aout = Ain;
-        ADCdata[i] = Ain;
-        wait(1./smpl);
-    }
+	for(i = 0; i < smpl; i++) {
+		Aout = Ain;
+		ADCdata[i] = Ain;
+		wait(1./smpl);
+	}
 
-    for(i = 0; i < smpl; i++) {
-        pc.printf("%1.3f\r\n", ADCdata[i]);
-        wait(0.1);
-    }
+	for(i = 0; i < smpl; i++) {
+		pc.printf("%1.3f\r\n", ADCdata[i]);
+		wait(0.1);
+	}
 }

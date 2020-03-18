@@ -17,9 +17,9 @@ frq = frq[range(int(n/2))] # one side frequency range
 serdev = '/dev/ttyACM0'
 s = serial.Serial(serdev)
 for x in range(0, int(Fs)):
-    line=s.readline() # Read an echo string from K66F terminated with '\n'
-    # print line
-    y[x] = float(line)
+	line=s.readline() # Read an echo string from K66F terminated with '\n'
+	# print line
+	y[x] = float(line)
 
 Y = np.fft.fft(y)/n*2 # fft computing and normalization
 Y = Y[range(int(n/2))] # remove the conjugate frequency parts
